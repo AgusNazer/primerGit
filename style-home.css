@@ -1,0 +1,760 @@
+/*----RESET----*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
+/* html {
+    min-height: 100%;
+    position: relative;
+  } */
+
+/* ENCABEZADO CON GRID*/
+header{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     grid-template-areas: 
+     "header header header"
+     ;
+     width: 100%;
+     height: 100%;
+     background-color: #e2df70;
+     justify-content: space-between; 
+     align-items:center;
+     padding: 5px;
+}
+
+.header{
+    grid-area: header;
+}
+
+
+.logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+a {
+    
+    text-decoration: none;
+}
+ 
+.botonera {
+    margin-right: 20px;
+}
+
+.botonera ul li {
+    
+    display: inline-block;  
+    list-style: none;
+    
+    
+    margin-left: 20px;
+    
+}
+
+.botonera ul li a {
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #5e665e;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+ul li a:hover{
+    color: #000;
+}
+
+p{
+    color: #29231f;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.h1-main{
+    font-size: 24px;
+}
+
+.grilla-home{
+    background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+/*--------------GRID AREA-----------------*/
+.grilla-home{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+    grid-template-areas: 
+    "header header header"
+    "h1-main h1-main h1-main"
+    "h2 h2 h2"
+    "imagen1 imagen2 imagen3"
+    "imagen4 imagen5 imagen6"
+    "imagen7 imagen8 imagen9"
+    "footer footer footer"
+    ;
+    padding: 1px;
+    column-gap: 5px;
+}
+
+header{
+    grid-area: header;
+    
+}
+.h1-main{
+    grid-area: h1-main;
+    
+   
+}
+
+h2{
+    grid-area: h2;
+    margin: 0 0 0 1px;
+   
+    
+}
+
+.imagen1{
+   grid-area: imagen1;
+   
+}
+.imagen2{
+    grid-area: imagen2;
+        
+}
+.imagen3{
+    grid-area: imagen3;
+        
+}
+.imagen4{
+    grid-area: imagen4;
+        
+}
+.imagen5{
+    grid-area: imagen5;
+        
+}
+.imagen6{
+    grid-area: imagen6;
+        
+}
+.imagen7{
+    grid-area: imagen7;
+   
+    
+}
+.imagen8{
+    grid-area: imagen8;
+        
+}
+.imagen9{
+    grid-area: imagen9;
+        
+}
+.footer{
+    grid-area: footer;
+}
+
+/*----FIN GRID AREA-------------*/
+.home{
+    margin: 5px;
+}
+.h3{
+    margin: 5px;
+    background-color:rgba(240,240,240,0) ;
+}
+
+img{
+    width: 100%;
+    height: 12.5em;
+    border-radius: 1%;
+    box-shadow: 2px 2px 10px;
+    
+    object-fit: cover;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+}
+
+
+p{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.home {
+    color: #29231f;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+
+/*-------------footer grid-------------*/
+.footer {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: 
+    "footer footer footer"
+    ;
+    background-color:#e2df70;
+}
+
+.footer{
+    grid-area: footer;
+    
+    
+}
+.piePagina {
+    
+    margin-top: 2em;
+    margin-bottom: 1em;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redSocial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 2.81em;
+    height: 2.81em;
+    line-height: 2.81em;
+    color: #000;
+    margin: right 0.62em; 
+    border: 1px solid #000;
+}
+.red-social :hover {
+    background-color: #95908b;
+}
+
+.derechos {
+    color: #000;
+}
+
+.box {
+    color: #000;
+}
+
+/*---------------------ABOUT GRID-----------------------*/
+.grilla-about {
+    background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.grilla-about{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    grid-template-areas: 
+    "header header header"
+    "h1-main h1-main h1-main"
+    "h2-history h2-history h2-history"
+    "p-history p-history p-history"
+    "imagen1 imagen2 imagen3"
+    "p-history2 p-history2 p-history2"
+    "footer footer footer"
+
+    ;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+header{
+    grid-area: header;
+}
+.h1-main{
+    grid-area: h1-main;
+}
+
+.h2-history{
+    grid-area: h2-history;
+}
+
+.p-history{
+    grid-area: p-history;
+    margin: 3px;
+}
+.p-history2{
+    grid-area: p-history2;
+    margin: 3px;
+}
+.imagen1-about {
+    grid-area: imagen1;
+    margin: 3px;
+}
+.imagen2-about{
+    grid-area: imagen2;
+    margin: 3px;
+}
+.imagen3-about{
+    grid-area: imagen3;
+    margin: 3px;
+}
+.footer{
+    grid-area: footer;
+}
+
+img{
+    width: 100%;
+    height: 12.5em;
+    border-radius: 1%;
+    box-shadow: 2px 2px 10px;
+    
+    object-fit: cover;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main{
+    margin-bottom: 1em;
+}
+
+
+.h2-history{
+    
+    padding:0 0 10px 0;
+    margin: 2px;
+    text-align: center!important;
+    justify-content: center;
+    color:#29231f;
+    font-size: 2.375rem;
+}
+
+/*----------------seccion menu--------------------*/
+.our-menu{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #000; */
+}
+
+.h2-center{
+    padding:0 0 10px 0;
+    margin: 2px;
+    text-align: center!important;
+    justify-content: center;
+    color: #29231f;
+    font-size: 2.375rem;
+}
+
+.p-textCenter{
+    display: block;
+    text-align: center!important;
+    margin: 0 100px 0 100px;
+    color: #000;
+    font-size: 18px;
+
+}
+
+.grilla-menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+    "header header header"
+    "h1-main h1-main h1-main"
+    "h2-center h2-center h2-center"
+    "p-textCenter p-textCenter p-textCenter"
+    "titulo1 titulo2 titulo3"
+    "card1 card2 card3"
+    "imagen1-menu imagen2-menu imagen3-menu"
+    "footer footer footer"
+    ;
+    /* row-gap: 5px;
+    column-gap: 5px;
+     */
+    
+   
+    /* border: 1px solid #000; */
+}
+
+.header{
+    grid-area: header;
+}
+.h1-main{
+    grid-area: h1-main;
+}
+.h2-center{
+    grid-area: h2-center;
+}
+.p-textCenter{
+    grid-area: p-textCenter;
+}
+
+
+.titulo1{
+    grid-area: titulo1;
+}
+.titulo2{
+    grid-area: titulo2;
+}
+.titulo3{
+    grid-area: titulo3;
+}
+
+
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+
+.imagen1-menu{
+    grid-area: imagen1-menu;
+}
+.imagen2-menu{
+    grid-area: imagen2-menu;
+}
+.imagen3-menu{
+    grid-area: imagen3-menu;
+    
+}
+
+
+.titulo1, .titulo2, .titulo3{
+    margin: 4px;
+}
+
+.card1, .card2, .card3{
+    margin: 4px;
+}
+
+
+.grilla-menu {
+    background-image: url(./imagenes/menu/coffeBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+/*------------------------------------------------------------------*/
+
+/*-------SECCION GALLERY  VA A HABER QUE CAMBIARLA POR EL TEMA DEL RESPONSIVE*/
+.grilla-shop{
+    background-image: url(imagenes/galleryfotos/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "header header header header"
+    "h1 h1 h1 h1"
+    "h3 h3 h3 h3"
+    "imagen1gallery imagen2gallery imagen3gallery imagen4gallery"
+    "imagen5gallery imagen6gallery imagen7gallery imagen8gallery"
+    "imagen9gallery imagen10gallery imagen11gallery imagen12gallery"
+    "footer footer footer footer"
+    ;
+    margin: 2px;
+    column-gap: 3px;
+    row-gap: 3px;
+    
+}
+
+.header{
+    grid-area: header;
+}
+h1{
+    grid-area: h1;
+}
+h3{
+    grid-area: h3;
+    margin: 2px;
+}
+
+.imagen1gallery{
+    grid-area: imagen21gallery;
+    
+}
+.imagen2gallery{
+    grid-area: imagen2gallery;
+    
+    
+}
+.imagen3gallery{
+    grid-area: imagen3gallery;
+    
+}
+.imagen4gallery{
+    grid-area: imagen4gallery;
+    
+}
+.imagen5gallery{
+    grid-area: imagen5gallery;
+    
+}
+.imagen6gallery{
+    grid-area: imagen6gallery;
+    
+}
+.imagen7gallery{
+    grid-area: imagen7gallery;
+    
+}
+.imagen8gallery{
+    grid-area: imagen8gallery;
+    
+}
+.imagen9gallery{
+    grid-area: imagen9gallery;
+    
+}
+.imagen10gallery{
+    grid-area: imagen10gallery;
+    
+}
+.imagen11gallery{
+    grid-area: imagen11gallery;
+    
+}
+.imagen11gallery{
+    grid-area: imagen12gallery;
+    
+}
+.imagen12gallery{
+    grid-area: imagen13gallery;
+    
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------SECCION CONTACT----------*/
+
+.grilla-contact {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    "header header header"
+    "form form form"
+    "iframe iframe iframe"
+    "footer footer footer"
+    ;
+    background-image: url(./imagenes/contactus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}  
+
+header{
+    grid-area: header;
+}
+.form{
+    grid-area: form;
+}
+h1{
+    grid-area: h1;
+}
+
+iframe{
+    grid-area: iframe;
+}
+.footer{
+    grid-area: footer;
+}
+
+.form {
+    width: 21.25rem;
+    height: 29.375rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: 10px;
+    padding: 20px 30px;
+    max-width: calc(100vh -40px);
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+.segundotitulo{
+    margin: 0;
+    padding-bottom: 10px;
+    width: 11.25rem;
+    color: #29231f;
+    border-bottom: 3px solid black;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .3s;
+    border-bottom: 2px solid #b1afb1;
+}
+
+input:focus {
+    border-bottom: 2px solid lightblue;
+}
+
+
+p:before{
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #b1afb1;
+}
+
+button{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #b1afb1;
+    background: 0;
+    color: #000;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+button:hover{
+    background-color: #b1afb1;
+    color: #fff;
+}
+
+.maps {
+    width: 21.25rem;
+    height: 28.125rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/*-----RESPONSIVE------*/
+
+/*  MOBILE */
+
+@media (max-width: 768px){
+    .logo{
+        display: block;
+    }
+    .botonera ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .grilla-home{
+    display: flex;
+    flex-direction: column;
+     }
+
+    .h1-main, h2{
+        display: flex;
+        
+        justify-content: center;
+
+    }
+    .grilla-about{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .grilla-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .grilla-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}  
+    
+
+  
+@media (max-width:768px){
+    .grilla-shop{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        "header header header"
+    "h1 h1 h1"
+    "h3 h3 h3"
+    "imagen1gallery imagen2gallery imagen3gallery"
+    "imagen4gallery imagen5gallery imagen6gallery" 
+    "imagen7gallery imagen8gallery imagen9gallery"
+    "imagen10gallery imagen11gallery imagen12gallery"
+    "footer footer footer"
+        ;
+        
+    }
+}
+@media(min-width:1024px){
+    .grilla-shop{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "header header header header"
+    "h1 h1 h1 h1"
+    "h3 h3 h3 h3"
+    "imagen1gallery imagen2gallery imagen3gallery imagen4gallery"
+    "imagen5gallery imagen6gallery imagen7gallery imagen8gallery"
+    "imagen9gallery imagen10gallery imagen11gallery imagen12gallery"
+    "footer footer footer footer"
+    ;
+    margin: 2px;
+    column-gap: 3px;
+    row-gap: 3px;
+        ;
+    }
+       
+}
+
+
+
+
+
+
+
+
+
+  
+
+    
