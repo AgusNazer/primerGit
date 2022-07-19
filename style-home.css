@@ -111,13 +111,16 @@ header{
 }
 .h1-main{
     grid-area: h1-main;
-    
-   
+    transition: all 2s;
+}
+.h1-main:hover{
+    background-color: #5e665e;
 }
 
 h2{
     grid-area: h2;
     margin: 0 0 0 1px;
+    background: linear-gradient(#29231f,#e2df70);
    
     
 }
