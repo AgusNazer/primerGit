@@ -4,30 +4,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
    }
-/* html {
-    min-height: 100%;
-    position: relative;
-  } */
 
-/* ENCABEZADO CON GRID*/
-header{
-     display: grid;
-     grid-template-columns: repeat(1,1fr);
-     grid-template-areas: 
-     "header header header"
-     ;
-     width: 100%;
-     height: 100%;
-     background-color: #e2df70;
-     justify-content: space-between; 
-     align-items:center;
-     padding: 5px;
-}
 
-.header{
-    grid-area: header;
-}
 
 
 .logo{
@@ -35,39 +15,16 @@ header{
     height: 2.5rem;
 }
 
-a {
-    
-    text-decoration: none;
-}
- 
-.botonera {
-    margin-right: 20px;
-}
-
-.botonera ul li {
-    
-    display: inline-block;  
-    list-style: none;
-    
-    
-    margin-left: 20px;
-    
-}
-
-.botonera ul li a {
-    
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #5e665e;
-}
-
+/* NAVBAR*/
 .logo {
     margin-left: 10px;
 }
 
-ul li a:hover{
-    color: #000;
+
+
+.navbar-brand, .nav-link {
+    font-family: sans-serif;
+    font-size: 20px;
 }
 
 p{
@@ -80,35 +37,7 @@ p{
     font-size: 24px;
 }
 
-.grilla-home{
-    background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-/*--------------GRID AREA-----------------*/
-.grilla-home{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-   
-    grid-template-areas: 
-    "header header header"
-    "h1-main h1-main h1-main"
-    "h2 h2 h2"
-    "imagen1 imagen2 imagen3"
-    "imagen4 imagen5 imagen6"
-    "imagen7 imagen8 imagen9"
-    "footer footer footer"
-    ;
-    padding: 1px;
-    column-gap: 5px;
-}
 
-header{
-    grid-area: header;
-    
-}
 .h1-main{
     grid-area: h1-main;
     transition: all 2s;
@@ -117,62 +46,34 @@ header{
     background-color: #5e665e;
 }
 
+.h1-Gallery{
+    transition: all 2s;
+    /* background: linear-gradient(to top,#29231f,#e2df70 ); */
+    font-size: 24px;
+}
+.h1-Gallery:hover{
+    background-color: #5e665e;
+}
+
 h2{
     grid-area: h2;
     margin: 0 0 0 1px;
+}
+/* .h2-history, .h2-home, .h2-center{
     background: linear-gradient(#29231f,#e2df70);
-   
-    
+} */
+
+h3{
+    font-size: 20px;
 }
 
-.imagen1{
-   grid-area: imagen1;
-   
-}
-.imagen2{
-    grid-area: imagen2;
-        
-}
-.imagen3{
-    grid-area: imagen3;
-        
-}
-.imagen4{
-    grid-area: imagen4;
-        
-}
-.imagen5{
-    grid-area: imagen5;
-        
-}
-.imagen6{
-    grid-area: imagen6;
-        
-}
-.imagen7{
-    grid-area: imagen7;
-   
-    
-}
-.imagen8{
-    grid-area: imagen8;
-        
-}
-.imagen9{
-    grid-area: imagen9;
-        
-}
-.footer{
-    grid-area: footer;
-}
-
-/*----FIN GRID AREA-------------*/
 .home{
     margin: 5px;
 }
 .h3{
     margin: 5px;
     background-color:rgba(240,240,240,0) ;
+    font-size: 16px;
 }
 
 img{
@@ -184,8 +85,102 @@ img{
     object-fit: cover;
 }
 
-body {
-    min-height: 100vh;
+.fondo-index{
+    background-image: url(./imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+#carouselExampleControls{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-cafe-frio{
+    width: 30rem;
+}
+
+.cafe-frio{
+    width: 30rem;
+    height: 20rem;
+}
+.iframe-contenedor{
+    width: 40rem;
+    height: 30rem;
+}
+iframe{
+    width: 40rem;
+    height: 30rem;
+}
+
+.grilla-home{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "carousel-inner p-carousel"
+    "cafe-frio imagen-cafe-frio  "
+    "p-carousel2 p-carousel2"
+    "iframe iframe "
+    
+    ;
+    row-gap: 2px;
+}
+
+.carousel-inner{
+    grid-area: carousel-inner;
+    width: 40rem;
+    margin: 2px;
+    border-radius: 3px;
+}
+.p-carousel{
+    grid-area: p-carousel;
+}
+.imagen-cafe-frio{
+    grid-area: imagen-cafe-frio;
+    width: 40rem;
+    margin: 2px;
+}
+.cafe-frio{
+    grid-area: cafe-frio;
+    width: 40rem;
+}
+/* .cafe-frio2{
+    grid-area: cafe-frio2;
+    width: 20rem;
+    height: 10rem;
+} */
+.p-carousel2{
+    grid-area:p-carousel2 ;
+    margin: 2px;
+}
+.iframe-contenedor{
+    grid-area: iframe-contenedor;
+    width: 40rem;
+    height: 30rem;
+    margin: 2px;
+    
+    
+}
+iframe{
+    grid-area: iframe;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 3px;
+    
+}
+
+
+/*SECCION ABOUT*/
+.fondo-about{
+    background-image: url(./imagenes/homeBackground/aboutSeccion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    /* min-height: 100vh; */
     font-family: 'Playfair Display', serif;
 }
 
@@ -212,7 +207,7 @@ p{
     grid-template-areas: 
     "footer footer footer"
     ;
-    background-color:#e2df70;
+    background-color:gainsboro;
 }
 
 .footer{
@@ -253,14 +248,14 @@ p{
 }
 
 /*---------------------ABOUT GRID-----------------------*/
-.grilla-about {
+/* .grilla-about {
     background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
     position: relative;
-}
+} */
 
 
 
@@ -326,9 +321,7 @@ img{
     object-fit: cover;
 }
 
-body {
-    font-family: sans-serif;
-}
+
 
 main{
     margin-bottom: 1em;
@@ -346,6 +339,7 @@ main{
 }
 
 /*----------------seccion menu--------------------*/
+/* Arreglar las 3 fotos del menu*/
 .our-menu{
     padding: 2px;
     display: flex;
@@ -397,6 +391,7 @@ main{
 }
 .h1-main{
     grid-area: h1-main;
+    
 }
 .h2-center{
     grid-area: h2-center;
@@ -425,6 +420,8 @@ main{
 }
 .card3{
     grid-area: card3;
+    
+
 }
 
 .imagen1-menu{
@@ -435,6 +432,7 @@ main{
 }
 .imagen3-menu{
     grid-area: imagen3-menu;
+    object-fit: cover;
     
 }
 
@@ -448,7 +446,7 @@ main{
 }
 
 
-.grilla-menu {
+.fondo-menu {
     background-image: url(./imagenes/menu/coffeBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -458,9 +456,9 @@ main{
 
 /*------------------------------------------------------------------*/
 
-/*-------SECCION GALLERY  VA A HABER QUE CAMBIARLA POR EL TEMA DEL RESPONSIVE*/
+/*-------SECCION GSHOP CARDS*/
 .grilla-shop{
-    background-image: url(imagenes/galleryfotos/fondo.jpg);
+    background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -472,9 +470,9 @@ main{
     "header header header header"
     "h1 h1 h1 h1"
     "h3 h3 h3 h3"
-    "imagen1gallery imagen2gallery imagen3gallery imagen4gallery"
-    "imagen5gallery imagen6gallery imagen7gallery imagen8gallery"
-    "imagen9gallery imagen10gallery imagen11gallery imagen12gallery"
+    "card-a card-b card-c card-d"
+    "card-e card-f card-g card-h"
+    "card-i card-j card-k card-l"
     "footer footer footer footer"
     ;
     margin: 2px;
@@ -494,76 +492,26 @@ h3{
     margin: 2px;
 }
 
-.imagen1gallery{
-    grid-area: imagen21gallery;
-    
-}
-.imagen2gallery{
-    grid-area: imagen2gallery;
-    
-    
-}
-.imagen3gallery{
-    grid-area: imagen3gallery;
-    
-}
-.imagen4gallery{
-    grid-area: imagen4gallery;
-    
-}
-.imagen5gallery{
-    grid-area: imagen5gallery;
-    
-}
-.imagen6gallery{
-    grid-area: imagen6gallery;
-    
-}
-.imagen7gallery{
-    grid-area: imagen7gallery;
-    
-}
-.imagen8gallery{
-    grid-area: imagen8gallery;
-    
-}
-.imagen9gallery{
-    grid-area: imagen9gallery;
-    
-}
-.imagen10gallery{
-    grid-area: imagen10gallery;
-    
-}
-.imagen11gallery{
-    grid-area: imagen11gallery;
-    
-}
-.imagen11gallery{
-    grid-area: imagen12gallery;
-    
-}
-.imagen12gallery{
-    grid-area: imagen13gallery;
-    
+
+.card{
+    width: 18rem;
 }
 
 footer{
     grid-area: footer;
 }
 
-
-
-
-
-
-
-
-
-
 /*--------SECCION CONTACT----------*/
 
-.grilla-contact {
+.fondo-contact{
+    background-image: url(./imagenes/contactus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+/* .grilla-contact {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: 
@@ -577,9 +525,9 @@ footer{
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
-}  
+}   */
 
-header{
+/* header{
     grid-area: header;
 }
 .form{
@@ -594,11 +542,13 @@ iframe{
 }
 .footer{
     grid-area: footer;
-}
+} */
+
+
 
 .form {
     width: 21.25rem;
-    height: 29.375rem;
+    height: 36rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
@@ -686,14 +636,29 @@ button:hover{
    .grilla-home{
     display: flex;
     flex-direction: column;
-     }
-
+    }
+    .carousel-inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .iframe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  
     .h1-main, h2{
         display: flex;
         
         justify-content: center;
-
     }
+    
+   
+   
+    /* .carousel-inner{
+        width: 40rem;
+    } */
+
     .grilla-about{
         display: flex;
         flex-direction: column;
@@ -703,33 +668,32 @@ button:hover{
         display: flex;
         flex-direction: column;
     }
-    .grilla-contact{
+    .form-container{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .iframe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .grilla-shop{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+     h1, h3{
+      
+      text-align: center;
     }
 }  
     
 
   
-@media (max-width:768px){
-    .grilla-shop{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-areas: 
-        "header header header"
-    "h1 h1 h1"
-    "h3 h3 h3"
-    "imagen1gallery imagen2gallery imagen3gallery"
-    "imagen4gallery imagen5gallery imagen6gallery" 
-    "imagen7gallery imagen8gallery imagen9gallery"
-    "imagen10gallery imagen11gallery imagen12gallery"
-    "footer footer footer"
-        ;
-        
-    }
-}
-@media(min-width:1024px){
+
+/* @media(min-width:1024px){
     .grilla-shop{
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -737,9 +701,7 @@ button:hover{
         "header header header header"
     "h1 h1 h1 h1"
     "h3 h3 h3 h3"
-    "imagen1gallery imagen2gallery imagen3gallery imagen4gallery"
-    "imagen5gallery imagen6gallery imagen7gallery imagen8gallery"
-    "imagen9gallery imagen10gallery imagen11gallery imagen12gallery"
+    
     "footer footer footer footer"
     ;
     margin: 2px;
@@ -748,7 +710,8 @@ button:hover{
         ;
     }
        
-}
+} */
+
 
 
 
