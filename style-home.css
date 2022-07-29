@@ -7,9 +7,6 @@
     
    }
 
-
-
-
 .logo{
     width: 2.5rem;
     height: 2.5rem;
@@ -35,21 +32,33 @@ p{
 
 .h1-main{
     font-size: 24px;
+    
+    
 }
 
+a{
+    color: #000;
+    text-decoration: none;
+}
 
-.h1-main{
+.h1-main a{
     grid-area: h1-main;
     transition: all 2s;
-}
-.h1-main:hover{
-    background-color: #5e665e;
+
+     color: #000;
 }
 
-.h1-Gallery{
+.h1-main:hover{
+    background-color: #5e665e;
+    
+}
+
+.h1-Gallery a{
     transition: all 2s;
     /* background: linear-gradient(to top,#29231f,#e2df70 ); */
     font-size: 24px;
+
+    color: #000;
 }
 .h1-Gallery:hover{
     background-color: #5e665e;
@@ -59,9 +68,22 @@ h2{
     grid-area: h2;
     margin: 0 0 0 1px;
 }
-/* .h2-history, .h2-home, .h2-center{
-    background: linear-gradient(#29231f,#e2df70);
-} */
+
+.h2-main{
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 h3{
     font-size: 20px;
@@ -86,101 +108,27 @@ img{
 }
 
 .fondo-index{
-    background-image: url(./imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+    background-image: url(/imagenes/homeBackground/desktop-table-wooden-wood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+
+    font-family: 'Playfair Display', serif;
 }
 
-#carouselExampleControls{
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagen-cafe-frio{
-    width: 30rem;
-}
-
-.cafe-frio{
-    width: 30rem;
-    height: 20rem;
-}
-.iframe-contenedor{
-    width: 40rem;
-    height: 30rem;
-}
-iframe{
-    width: 40rem;
-    height: 30rem;
-}
-
-.grilla-home{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-areas: 
-    "carousel-inner p-carousel"
-    "cafe-frio imagen-cafe-frio  "
-    "p-carousel2 p-carousel2"
-    "iframe iframe "
-    
-    ;
-    row-gap: 2px;
-}
-
-.carousel-inner{
-    grid-area: carousel-inner;
-    width: 40rem;
-    margin: 2px;
-    border-radius: 3px;
-}
-.p-carousel{
-    grid-area: p-carousel;
-}
-.imagen-cafe-frio{
-    grid-area: imagen-cafe-frio;
-    width: 40rem;
-    margin: 2px;
-}
-.cafe-frio{
-    grid-area: cafe-frio;
-    width: 40rem;
-}
-/* .cafe-frio2{
-    grid-area: cafe-frio2;
-    width: 20rem;
-    height: 10rem;
-} */
-.p-carousel2{
-    grid-area:p-carousel2 ;
-    margin: 2px;
-}
-.iframe-contenedor{
-    grid-area: iframe-contenedor;
-    width: 40rem;
-    height: 30rem;
-    margin: 2px;
-    
+.boton1{
+    background-color:#95908b;
     
 }
-iframe{
-    grid-area: iframe;
-    width: 40rem;
-    height: 30rem;
-    border-radius: 3px;
-    
-}
-
-
 /*SECCION ABOUT*/
 .fondo-about{
-    background-image: url(./imagenes/homeBackground/aboutSeccion.jpg);
+    background-image: url(/imagenes/homeBackground/aboutSeccion.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
-    /* min-height: 100vh; */
+    
     font-family: 'Playfair Display', serif;
 }
 
@@ -200,6 +148,12 @@ p{
 }
 
 
+.boton{
+    background-color:#95908b;
+}
+.carousel-inner{
+    margin-bottom: 6px;
+}
 /*-------------footer grid-------------*/
 .footer {
     display: grid;
@@ -248,14 +202,7 @@ p{
 }
 
 /*---------------------ABOUT GRID-----------------------*/
-/* .grilla-about {
-    background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-    position: relative;
-} */
+
 
 
 
@@ -336,10 +283,25 @@ main{
     justify-content: center;
     color:#29231f;
     font-size: 2.375rem;
+    
+}
+.h2-history, .h2-center, .h3-shop {
+    animation-duration: 3s;
+    animation-name:aparecer;
+}
+@keyframes h2-history{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
+
+
 /*----------------seccion menu--------------------*/
-/* Arreglar las 3 fotos del menu*/
+
 .our-menu{
     padding: 2px;
     display: flex;
@@ -368,6 +330,7 @@ main{
 .grilla-menu{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    
     grid-template-areas:
     "header header header"
     "h1-main h1-main h1-main"
@@ -378,12 +341,8 @@ main{
     "imagen1-menu imagen2-menu imagen3-menu"
     "footer footer footer"
     ;
-    /* row-gap: 5px;
-    column-gap: 5px;
-     */
-    
-   
-    /* border: 1px solid #000; */
+    margin: 4px;
+    column-gap: 4px;
 }
 
 .header{
@@ -414,18 +373,22 @@ main{
 
 .card1{
     grid-area: card1;
+    width: 100%;
 }
 .card2{
     grid-area: card2;
+    width: 100%;
 }
 .card3{
     grid-area: card3;
+    width: 100%;
     
 
 }
 
 .imagen1-menu{
     grid-area: imagen1-menu;
+   
 }
 .imagen2-menu{
     grid-area: imagen2-menu;
@@ -447,22 +410,30 @@ main{
 
 
 .fondo-menu {
-    background-image: url(./imagenes/menu/coffeBackground.jpg);
+    background-image: url(/imagenes/menu/coffeBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+
+    font-family: 'Playfair Display', serif;
 }
 
-/*------------------------------------------------------------------*/
 
-/*-------SECCION GSHOP CARDS*/
-.grilla-shop{
-    background-image: url(imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+
+/*-------SECCION SHOP CARDS*/
+
+.fondo-shop{
+    background-image: url(/imagenes/homeBackground/desktop-table-wooden-wood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+
+    font-family: 'Playfair Display', serif;
+}
+.grilla-shop{
+   
 
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -504,47 +475,14 @@ footer{
 /*--------SECCION CONTACT----------*/
 
 .fondo-contact{
-    background-image: url(./imagenes/contactus.jpg);
+    background-image: url(/imagenes/contactus.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
-}
 
-/* .grilla-contact {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-areas: 
-    "header header header"
-    "form form form"
-    "iframe iframe iframe"
-    "footer footer footer"
-    ;
-    background-image: url(./imagenes/contactus.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-}   */
-
-/* header{
-    grid-area: header;
+    font-family: 'Playfair Display', serif;
 }
-.form{
-    grid-area: form;
-}
-h1{
-    grid-area: h1;
-}
-
-iframe{
-    grid-area: iframe;
-}
-.footer{
-    grid-area: footer;
-} */
-
-
 
 .form {
     width: 21.25rem;
@@ -632,34 +570,13 @@ button:hover{
         justify-content: center;
         align-items: center;
     }
-
-   .grilla-home{
-    display: flex;
-    flex-direction: column;
-    }
-    .carousel-inner{
-        display: flex;
-        flex-direction: column;
-    }
-    .iframe{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-  
     .h1-main, h2{
         display: flex;
-        
         justify-content: center;
+        
     }
     
-   
-   
-    /* .carousel-inner{
-        width: 40rem;
-    } */
-
-    .grilla-about{
+   .grilla-about{
         display: flex;
         flex-direction: column;
 
@@ -668,16 +585,8 @@ button:hover{
         display: flex;
         flex-direction: column;
     }
-    .form-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .iframe{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+   
+   
     .grilla-shop{
         
         display: flex;
@@ -688,30 +597,18 @@ button:hover{
       
       text-align: center;
     }
-}  
-    
-
-  
-
-/* @media(min-width:1024px){
-    .grilla-shop{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-areas: 
-        "header header header header"
-    "h1 h1 h1 h1"
-    "h3 h3 h3 h3"
-    
-    "footer footer footer footer"
-    ;
-    margin: 2px;
-    column-gap: 3px;
-    row-gap: 3px;
-        ;
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-       
-} */
-
+    .boton2, .boton1 {
+        width: 100%;
+        background-color:rgb(155, 144, 84) ;
+        
+    }
+    
+}
 
 
 
