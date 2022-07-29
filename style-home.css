@@ -108,7 +108,7 @@ img{
 }
 
 .fondo-index{
-    background-image: url(/imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+    background-image: url(./imagenes/homeBackground/desktop-table-wooden-wood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -123,7 +123,7 @@ img{
 }
 /*SECCION ABOUT*/
 .fondo-about{
-    background-image: url(/imagenes/homeBackground/aboutSeccion.jpg);
+    background-image: url(./imagenes/homeBackground/aboutSeccion.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -410,7 +410,7 @@ main{
 
 
 .fondo-menu {
-    background-image: url(/imagenes/menu/coffeBackground.jpg);
+    background-image: url(./imagenes/menu/coffeBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -424,7 +424,7 @@ main{
 /*-------SECCION SHOP CARDS*/
 
 .fondo-shop{
-    background-image: url(/imagenes/homeBackground/desktop-table-wooden-wood.jpg);
+    background-image: url(./imagenes/homeBackground/desktop-table-wooden-wood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -475,7 +475,7 @@ footer{
 /*--------SECCION CONTACT----------*/
 
 .fondo-contact{
-    background-image: url(/imagenes/contactus.jpg);
+    background-image: url(./imagenes/contactus.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
