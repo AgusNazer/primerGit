@@ -1,4 +1,13 @@
 /*----RESET----*/
+ /* crear las variables aca para los estilos*/
+
+
+ @import "variables";
+ @import "header";
+ @import "footer";
+ @import "animacinoes";
+ @import "responsive";
+
 
 * {
     padding: 0;
@@ -6,33 +15,7 @@
     box-sizing: border-box;
   }
   
-  .logo {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: 10px;
-  }
-  
-  /* NAVBAR*/
-  
-  .navbar-brand, .nav-link {
-    font-family: sans-serif;
-    font-size: 20px;
-  }
-  
-  p {
-    color: #29231f;
-    font-family: sans-serif;
-    font-weight: 600;
-  }
-  
-  .h1-main {
-    font-size: 24px;
-  }
-  
-  a {
-    color: #000;
-    text-decoration: none;
-  }
+ 
   
   /*-----------SCSS-----------*/
   .h1-main {
@@ -152,41 +135,7 @@
   
   /*-------------footer grid-------------*/
   
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "footer footer footer";
-    background-color: gainsboro;
-    grid-area: footer;
-  }
   
-  .piePagina {
-    margin-top: 2em;
-    margin-bottom: 1em;
-    display: table;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .redSocial a {
-    display: inline-block;
-    text-decoration: none;
-    width: 2.81em;
-    height: 2.81em;
-    line-height: 2.81em;
-    color: #000;
-    margin: right 0.62em;
-    border: 1px solid #000;
-  }
-  
-  .red-social :hover {
-    background-color: #95908b;
-  }
-  
-  .derechos, .box {
-    color: #000;
-  }
   
   /*---------------------ABOUT GRID-----------------------*/
   
@@ -262,20 +211,9 @@
     animation-name: aparecer;
   }
   
-  .h2-center, .h3-shop {
-    animation-duration: 3s;
-    animation-name: aparecer;
-  }
   
-  @keyframes h2-history {
-    0% {
-      opacity: 0;
-    }
   
-    100% {
-      opacity: 1;
-    }
-  }
+  
   
   /*----------------seccion menu--------------------*/
   
@@ -506,48 +444,4 @@
   
   /*-----RESPONSIVE------*/
   
-  /*  MOBILE */
-  
-  @media (max-width: 768px) {
-    .logo {
-      display: block;
-    }
-  
-    .botonera ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .h1-main, h2 {
-      display: flex;
-      justify-content: center;
-    }
-  
-    .grilla-about, .grilla-menu {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .grilla-shop {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    h1, h3 {
-      text-align: center;
-    }
-  
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .boton2, .boton1 {
-      width: 100%;
-      background-color: rgb(155, 144, 84);
-    }
-  }
+ 
